@@ -1,0 +1,20 @@
+# Ram Interior
+
+> Ram Interior is a Mumbai-based contractor and project execution company with 35+ years of experience and 100+ completed projects across interior, civil and turnkey work. The business is a proprietorship owned by Abhishek Ramsajan Yadav, based at Jacob Circle, Mumbai, and serves homeowners, businesses, architects and interior designers across Mumbai and Maharashtra.
+
+## Pages
+
+- [Home](/index.html): Overview of Ram Interior — services, experience and project highlights.
+- [About](/pages/about.html): Company background, professional team and business details.
+- [Services](/pages/services.html): Interior, civil, furniture, renovation, electrical, plumbing, mechanical and turnkey project execution services.
+- [Projects](/pages/projects.html): Gallery of completed residential and commercial projects.
+- [For Architects & Designers](/pages/architects.html): How Ram Interior partners with architects and interior designers as an execution contractor.
+- [FAQs](/pages/faq.html): Answers to common questions about working with Ram Interior.
+- [Contact](/pages/contact.html): Enquiry form, phone/WhatsApp/email details, address and map.
+
+## Contact
+
+- Phone / WhatsApp: 9768086403
+- Email: Raminteriors8@gmail.com
+- Address: 15th Floor, E-1510, Shramik Ekta Federation CHSL, JR Boricha Marg, Jacob Circle, Mumbai, Maharashtra – 400011
+- Hours: Monday – Sunday, 10:00 AM – 9:00 PM

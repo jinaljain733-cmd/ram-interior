@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 72">
+  <!-- Roundel mark -->
+  <circle cx="36" cy="36" r="34" fill="#2D523D"/>
+  <circle cx="36" cy="36" r="26" fill="none" stroke="#B9924A" stroke-width="2.6"/>
+  <text x="36" y="47" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif" font-weight="700"
+        font-size="30" fill="#F5F1E6">R</text>
+
+  <!-- Wordmark -->
+  <text x="86" y="45" font-family="Georgia, 'Times New Roman', serif" font-weight="700"
+        font-size="30" letter-spacing="0.2" fill="#1C231F">Ram Interior</text>
+</svg>
