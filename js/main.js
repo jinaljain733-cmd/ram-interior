@@ -91,6 +91,73 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => el.classList.add('is-visible'));
   }
 
+  // "Spaces We Transform" grid — clickable "folder" gallery.
+  // Cards with a data-gallery-images list (Living Rooms, Bedrooms) show a
+  // small folder badge; clicking the badge or the card opens a lightbox
+  // the visitor can click through manually (no auto-play, no scrolling).
+  const galleryCards = document.querySelectorAll('.space-card[data-gallery]');
+  if (galleryCards.length) {
+    const lightbox = document.getElementById('gallery-lightbox');
+    const lbImg = document.getElementById('gallery-lightbox-img');
+    const lbTitle = document.getElementById('gallery-lightbox-title');
+    const lbCount = document.getElementById('gallery-lightbox-count');
+    const prevBtn = lightbox.querySelector('[data-gallery-prev]');
+    const nextBtn = lightbox.querySelector('[data-gallery-next]');
+
+    let currentImages = [];
+    let currentTitle = '';
+    let currentIndex = 0;
+
+    const render = () => {
+      lbImg.src = currentImages[currentIndex];
+      lbImg.alt = currentTitle + ' photo ' + (currentIndex + 1);
+      lbTitle.textContent = currentTitle;
+      lbCount.textContent = (currentIndex + 1) + ' / ' + currentImages.length;
+    };
+
+    const openGallery = (card) => {
+      try {
+        currentImages = JSON.parse(card.getAttribute('data-gallery-images') || '[]');
+      } catch (e) {
+        currentImages = [];
+      }
+      if (!currentImages.length) return;
+      currentTitle = card.getAttribute('data-gallery-title') || '';
+      currentIndex = 0;
+      render();
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeGallery = () => {
+      lightbox.hidden = true;
+      document.body.style.overflow = '';
+    };
+
+    const step = (dir) => {
+      if (!currentImages.length) return;
+      currentIndex = (currentIndex + dir + currentImages.length) % currentImages.length;
+      render();
+    };
+
+    galleryCards.forEach(card => {
+      card.addEventListener('click', () => openGallery(card));
+    });
+
+    lightbox.querySelectorAll('[data-gallery-close]').forEach(el => {
+      el.addEventListener('click', closeGallery);
+    });
+    prevBtn.addEventListener('click', (e) => { e.stopPropagation(); step(-1); });
+    nextBtn.addEventListener('click', (e) => { e.stopPropagation(); step(1); });
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') closeGallery();
+      if (e.key === 'ArrowLeft') step(-1);
+      if (e.key === 'ArrowRight') step(1);
+    });
+  }
+
   // Enquiry form — no backend on this static site, so submissions are
   // handed off to WhatsApp (the business's primary contact channel)
   // with the form fields pre-filled into the message.

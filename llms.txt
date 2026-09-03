@@ -7,7 +7,7 @@
 - [Home](/index.html): Overview of Ram Interior — services, experience and project highlights.
 - [About](/pages/about.html): Company background, professional team and business details.
 - [Services](/pages/services.html): Interior, civil, furniture, renovation, electrical, plumbing, mechanical and turnkey project execution services.
-- [Projects](/pages/projects.html): Gallery of completed residential and commercial projects.
+- [Project Catalogue](/pages/catalogue.html): Visual overview and premium digital catalogue of completed residential and commercial projects.
 - [For Architects & Designers](/pages/architects.html): How Ram Interior partners with architects and interior designers as an execution contractor.
 - [FAQs](/pages/faq.html): Answers to common questions about working with Ram Interior.
 - [Contact](/pages/contact.html): Enquiry form, phone/WhatsApp/email details, address and map.

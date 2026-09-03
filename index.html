@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ram Interior | Turnkey Interior Contractor in Mumbai</title>
-<meta name="description" content="Ram Interior is a Mumbai-based turnkey interior contractor with 35+ years of experience — recognised as a residential interior contractor in Mumbai as well as a commercial interior contractor in Mumbai, serving homes, offices and businesses, with 100+ completed projects and a professional team.">
+<meta name="description" content="Mumbai-based turnkey interior & civil contractor with 35+ years' experience and 100+ completed residential and commercial projects.">
 <link rel="canonical" href="https://www.raminteriorofficial.in/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ram Interior | Turnkey Interior Contractor in Mumbai">
@@ -25,7 +25,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/hero/home-hero.webp" fetchpriority="high">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/catalogue.css">
 <style>
 /* ===== Spaces We Work On — scoped styles ===== */
 .ss-note{
@@ -65,7 +67,11 @@
     "postalCode": "400011",
     "addressCountry": "IN"
   },
-  "areaServed": ["Mumbai", "Maharashtra"],
+  "geo": { "@type": "GeoCoordinates", "latitude": 18.9819, "longitude": 72.8258 },
+  "areaServed": [
+    { "@type": "City", "name": "Mumbai" },
+    { "@type": "State", "name": "Maharashtra" }
+  ],
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -80,40 +86,18 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "GeneralContractor",
+  "@type": "WebSite",
   "name": "Ram Interior",
-  "image": "https://www.raminteriorofficial.in/images/og-image.jpg",
-  "url": "https://www.raminteriorofficial.in/",
-  "telephone": "+91-9768086403",
-  "email": "Raminteriors8@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "15th Floor, E-1510, Shramik Ekta Federation CHSL, JR Boricha Marg, Near Arthur Road Jail, Jacob Circle",
-    "addressLocality": "Mumbai",
-    "addressRegion": "Maharashtra",
-    "postalCode": "400011",
-    "addressCountry": "IN"
-  },
-  "geo": { "@type": "GeoCoordinates", "latitude": 18.9819, "longitude": 72.8258 },
-  "areaServed": [
-    { "@type": "City", "name": "Mumbai" },
-    { "@type": "State", "name": "Maharashtra" }
-  ],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "10:00",
-    "closes": "21:00"
-  },
-  "sameAs": ["https://instagram.com/raminteroot"]
+  "url": "https://www.raminteriorofficial.in/"
 }
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Ram Interior",
-  "url": "https://www.raminteriorofficial.in/"
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.raminteriorofficial.in/"}
+  ]
 }
 </script>
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -122,13 +106,6 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <meta name="theme-color" content="#2D523D">
 <link rel="manifest" href="manifest.json">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-<!-- End Google Tag Manager -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D74D0TCPS4"></script>
 <script>
@@ -139,12 +116,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
 <header class="site-header">
   <div class="wrap">
     <a href="index.html" class="brand">
@@ -155,7 +126,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="index.html" class="active">Home</a>
       <a href="pages/about.html">About</a>
       <a href="pages/services.html">Services</a>
-      <a href="pages/projects.html">Projects</a>
+      <a href="pages/catalogue.html">Project Catalogue</a>
       <a href="pages/architects.html">For Architects &amp; Designers</a>
       <a href="pages/faq.html">FAQs</a>
       <a href="pages/contact.html">Contact</a>
@@ -166,6 +137,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </header>
+
 
 <!-- ============ HERO ============ -->
 <section class="hero hero--photo">
@@ -181,7 +153,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="hero-ctas">
       <button type="button" data-open-project-form class="btn btn-primary">Request a Call</button>
       <a href="https://wa.me/919768086403?text=Hello%20Ram%20Interior%2C%20I%20would%20like%20to%20discuss%20my%20project.%20Please%20share%20more%20details." class="btn btn-outline-dark">WhatsApp Us</a>
-      <a href="pages/projects.html" class="btn btn-outline-dark">View Our Work</a>
+      <a href="pages/catalogue.html" class="btn btn-outline-dark">View Our Work</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><div class="num">35+</div><div class="label">Years of Experience</div></div>
@@ -204,7 +176,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="framed-photo about-photo" data-reveal>
         <picture>
           <source srcset="images/about/about-photo.webp" type="image/webp">
-          <img src="images/about/about-photo.jpg" alt="Ram Interior completed project — entryway and joinery detail" loading="lazy">
+          <img src="images/about/about-photo.jpg" width="1000" height="1250" alt="Ram Interior completed project — entryway and joinery detail" loading="lazy">
         </picture>
       </div>
       <div class="about-body">
@@ -230,21 +202,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="space-card">
         <picture>
           <source srcset="images/spaces/homes-flats.webp" type="image/webp">
-          <img src="images/spaces/homes-flats.jpg" alt="Home and flat interior execution by Ram Interior, Mumbai" loading="lazy">
+          <img src="images/spaces/homes-flats.jpg" width="1000" height="1333" alt="Home and flat interior execution by Ram Interior, Mumbai" loading="lazy">
         </picture>
         <div class="label"><span class="tag-mono">Residential</span><h3>Homes &amp; Flats</h3><p style="color:#D7DED8; font-size:0.82rem; margin-top:0.3rem;">Living Rooms · Bedrooms · Kitchens · Bathrooms</p></div>
       </div>
       <div class="space-card">
         <picture>
           <source srcset="images/spaces/villas-bungalows.webp" type="image/webp">
-          <img src="images/spaces/villas-bungalows.jpg" alt="Villa and bungalow exterior — Ram Interior project" loading="lazy">
+          <img src="images/spaces/villas-bungalows.jpg" width="1000" height="1333" alt="Villa and bungalow exterior — Ram Interior project" loading="lazy">
         </picture>
         <div class="label"><span class="tag-mono">Residential</span><h3>Villas &amp; Bungalows</h3><p style="color:#D7DED8; font-size:0.82rem; margin-top:0.3rem;">Complete Residential Projects</p></div>
       </div>
       <div class="space-card">
         <picture>
           <source srcset="images/spaces/commercial.webp" type="image/webp">
-          <img src="images/spaces/commercial.jpg" alt="Commercial interior execution by Ram Interior, Mumbai" loading="lazy">
+          <img src="images/spaces/commercial.jpg" width="1000" height="1333" alt="Commercial interior execution by Ram Interior, Mumbai" loading="lazy">
         </picture>
         <div class="label"><span class="tag-mono">Commercial</span><h3>Commercial Spaces</h3><p style="color:#D7DED8; font-size:0.82rem; margin-top:0.3rem;">Offices · Retail · Commercial Fit-Outs</p></div>
       </div>
@@ -254,11 +226,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- ============ PROJECT CATALOGUE — Section A: Existing Project Collage ============ -->
+<section class="section" id="project-catalogue" data-reveal>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-mono section-num">03 — Project Catalogue</span>
+      <h2>A Glimpse At Our Work.</h2>
+      <p>A look at the spaces we've helped bring to life - browse the collage below, then explore our premium digital catalogue for more.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/gallery/pool-villa-exterior.webp" type="image/webp">
+          <img src="images/gallery/pool-villa-exterior.jpg" width="1000" height="666" alt="Villa exterior and poolside project executed by Ram Interior, Mumbai" loading="lazy">
+        </picture>
+      </div>
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/gallery/home-library.webp" type="image/webp">
+          <img src="images/gallery/home-library.jpg" width="1000" height="666" alt="Home library and study project executed by Ram Interior, Mumbai" loading="lazy">
+        </picture>
+      </div>
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/gallery/homes-flats-open-plan.webp" type="image/webp">
+          <img src="images/gallery/homes-flats-open-plan.jpg" width="1000" height="666" alt="Home interior project executed by Ram Interior, Mumbai" loading="lazy">
+        </picture>
+      </div>
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/gallery/commercial-reception.webp" type="image/webp">
+          <img src="images/gallery/commercial-reception.jpg" width="1000" height="1249" alt="Commercial project executed by Ram Interior, Mumbai" loading="lazy">
+        </picture>
+      </div>
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/gallery/bedroom-sage.webp" type="image/webp">
+          <img src="images/gallery/bedroom-sage.jpg" width="1000" height="1502" alt="Bedroom project executed by Ram Interior, Mumbai" loading="lazy">
+        </picture>
+      </div>
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/gallery/kitchen-olive.webp" type="image/webp">
+          <img src="images/gallery/kitchen-olive.jpg" width="1000" height="1333" alt="Kitchen project executed by Ram Interior, Mumbai" loading="lazy">
+        </picture>
+      </div>
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/gallery/office.webp" type="image/webp">
+          <img src="images/gallery/office.jpg" width="1000" height="1333" alt="Office project executed by Ram Interior, Mumbai" loading="lazy">
+        </picture>
+      </div>
+      <div class="gallery-item">
+        <picture>
+          <source srcset="images/gallery/bathroom.webp" type="image/webp">
+          <img src="images/gallery/bathroom.jpg" width="1000" height="1333" alt="Bathroom project executed by Ram Interior, Mumbai" loading="lazy">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT CATALOGUE — Section B: Premium Auto-Swiping Book ============ -->
+<section class="catalogue-section" data-reveal>
+  <div class="wrap">
+    <div class="catalogue-head center">
+      <span class="tag-mono">Explore More Projects</span>
+      <h2>Premium Digital Catalogue</h2>
+    </div>
+    <div id="catalogue-preview"></div>
+    <div class="catalogue-cta">
+      <a href="pages/catalogue.html" class="btn btn-primary">View Full Project Catalogue →</a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ SERVICES & COORDINATION (merged) ============ -->
 <section class="section on-dark" id="services" data-reveal>
   <div class="wrap">
     <div class="coord-layout">
-      <span class="tag-mono section-num coord-label">03 — Services &amp; Coordination</span>
+      <span class="tag-mono section-num coord-label">04 — Services &amp; Coordination</span>
       <div class="coord-left">
         <h2>Multiple Requirements. One Execution Partner.</h2>
         <p class="coord-lede">Ram Interior consolidates your entire build under a single point of contact. We align every trade to deliver a seamless, unified construction process from start to finish.</p>
@@ -324,14 +371,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section" data-reveal>
   <div class="wrap">
     <div class="section-head section-head--tight">
-      <span class="tag-mono section-num">04 — For Architects &amp; Interior Designers</span>
+      <span class="tag-mono section-num">05 — For Architects &amp; Interior Designers</span>
       <h2>Your Trusted Contracting and Project Execution Partner.</h2>
     </div>
     <div class="architects-panel">
       <div class="framed-photo architects-photo">
         <picture>
           <source srcset="images/architects/architects-studio.webp" type="image/webp">
-          <img src="images/architects/architects-studio.jpg" alt="Design studio table with floor plans, mood boards and material samples used by Ram Interior" loading="lazy">
+          <img src="images/architects/architects-studio.jpg" width="1200" height="1500" alt="Design studio table with floor plans, mood boards and material samples used by Ram Interior" loading="lazy">
         </picture>
       </div>
       <div class="architects-content">
@@ -340,19 +387,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="tag-mono architects-benefits-label">Why Partner With Us?</span>
           <ul class="architects-benefits">
             <li>
-              <h4>🔄 All-in-One Multi-Trade Execution</h4>
+              <h3>🔄 All-in-One Multi-Trade Execution</h3>
               <p>Civil, interior, custom furniture, electrical, and plumbing are managed under a single contract. You never have to referee between multiple independent vendors.</p>
             </li>
             <li>
-              <h4>📅 Precision On-Site Coordination</h4>
+              <h3>📅 Precision On-Site Coordination</h3>
               <p>We handle daily site management, sequence the trades logically, and keep construction moving forward without sacrificing design integrity.</p>
             </li>
             <li>
-              <h4>🏗️ Professional Technical Support</h4>
+              <h3>🏗️ Professional Technical Support</h3>
               <p>Gain immediate access to skilled site engineers, master craftsmen, and experienced project managers who understand complex architectural details.</p>
             </li>
             <li>
-              <h4>✏️ Uncompromised Design Fidelity</h4>
+              <h3>✏️ Uncompromised Design Fidelity</h3>
               <p>Your drawings and material specifications are treated as absolute. We execute exactly what you design, honoring your creative vision down to the last millimeter.</p>
             </li>
           </ul>
@@ -360,67 +407,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="pages/architects.html" class="btn btn-primary">Know More →</a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ FEATURED PROJECTS / GALLERY ============ -->
-<section class="section tint" id="projects" data-reveal>
-  <div class="wrap">
-    <div class="section-head">
-      <span class="tag-mono section-num">05 — Projects</span>
-      <h2>A Glimpse At Our Work.</h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <picture>
-          <source srcset="images/gallery/pool-villa-exterior.webp" type="image/webp">
-          <img src="images/gallery/pool-villa-exterior.jpg" alt="Villa exterior and poolside project executed by Ram Interior, Mumbai" loading="lazy">
-        </picture>
-      </div>
-      <div class="gallery-item">
-        <picture>
-          <source srcset="images/gallery/home-library.webp" type="image/webp">
-          <img src="images/gallery/home-library.jpg" alt="Home library and study project executed by Ram Interior, Mumbai" loading="lazy">
-        </picture>
-      </div>
-      <div class="gallery-item">
-        <picture>
-          <source srcset="images/gallery/homes-flats-open-plan.webp" type="image/webp">
-          <img src="images/gallery/homes-flats-open-plan.jpg" alt="Home interior project executed by Ram Interior, Mumbai" loading="lazy">
-        </picture>
-      </div>
-      <div class="gallery-item">
-        <picture>
-          <source srcset="images/gallery/commercial-reception.webp" type="image/webp">
-          <img src="images/gallery/commercial-reception.jpg" alt="Commercial project executed by Ram Interior, Mumbai" loading="lazy">
-        </picture>
-      </div>
-      <div class="gallery-item">
-        <picture>
-          <source srcset="images/gallery/bedroom-sage.webp" type="image/webp">
-          <img src="images/gallery/bedroom-sage.jpg" alt="Bedroom project executed by Ram Interior, Mumbai" loading="lazy">
-        </picture>
-      </div>
-      <div class="gallery-item">
-        <picture>
-          <source srcset="images/gallery/kitchen-olive.webp" type="image/webp">
-          <img src="images/gallery/kitchen-olive.jpg" alt="Kitchen project executed by Ram Interior, Mumbai" loading="lazy">
-        </picture>
-      </div>
-      <div class="gallery-item">
-        <picture>
-          <source srcset="images/gallery/office.webp" type="image/webp">
-          <img src="images/gallery/office.jpg" alt="Office project executed by Ram Interior, Mumbai" loading="lazy">
-        </picture>
-      </div>
-      <div class="gallery-item">
-        <picture>
-          <source srcset="images/gallery/bathroom.webp" type="image/webp">
-          <img src="images/gallery/bathroom.jpg" alt="Bathroom project executed by Ram Interior, Mumbai" loading="lazy">
-        </picture>
-      </div>
-    </div>
-    <div class="center mt-lg"><a href="pages/projects.html" class="btn btn-ghost">View All Projects</a></div>
   </div>
 </section>
 
@@ -503,17 +489,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>A Mumbai-based turnkey interior and civil contractor with 35+ years of experience and 100+ completed projects, backed by a professional team handling interior, civil, renovation, and turnkey requirements.</p>
     </div>
     <div>
-      <h4>Quick Links</h4>
+      <h3>Quick Links</h3>
       <ul>
         <li><a href="pages/about.html">About</a></li>
         <li><a href="pages/services.html">Services</a></li>
-        <li><a href="pages/projects.html">Projects</a></li>
+        <li><a href="pages/catalogue.html">Project Catalogue</a></li>
         <li><a href="pages/architects.html">For Architects &amp; Designers</a></li>
         <li><a href="pages/faq.html">FAQs</a></li>
       </ul>
     </div>
     <div>
-      <h4>Contact</h4>
+      <h3>Contact</h3>
       <ul>
         <li><a href="tel:+919768086403">9768086403</a></li>
         <li><a href="tel:+917738542508">7738542508</a></li>
@@ -522,7 +508,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
     <div>
-      <h4>Address &amp; Hours</h4>
+      <h3>Address &amp; Hours</h3>
       <ul>
         <li>15th Floor, E-1510, Shramik Ekta Federation CHSL, JR Boricha Marg, Jacob Circle, Mumbai – 400011</li>
         <li>Mon – Sun: 10:00 AM – 9:00 PM</li>
@@ -644,6 +630,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </form>
   </div>
 </div>
+<script src="js/catalogue-data.js"></script>
+<script src="js/catalogue.js"></script>
 <script src="js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var mount = document.getElementById("catalogue-preview");
+    if (mount && window.RamCatalogue) {
+      RamCatalogue.mount(mount, { mode: "preview", pathPrefix: "", limit: 10 });
+    }
+  });
+</script>
 </body>
 </html>

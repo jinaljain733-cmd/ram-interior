@@ -28,9 +28,19 @@
   status = 200
 
 [[redirects]]
-  from = "/projects"
-  to = "/pages/projects.html"
+  from = "/catalogue"
+  to = "/pages/catalogue.html"
   status = 200
+
+[[redirects]]
+  from = "/projects"
+  to = "/pages/catalogue.html"
+  status = 301
+
+[[redirects]]
+  from = "/pages/projects.html"
+  to = "/pages/catalogue.html"
+  status = 301
 
 [[redirects]]
   from = "/architects"
