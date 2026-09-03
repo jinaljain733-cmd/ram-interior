@@ -96,12 +96,6 @@
       '<div class="rc-leaf-face rc-leaf-back" id="rcBack"></div>' +
       "</div>" +
       "</div>" +
-      '<button type="button" class="rc-nav rc-nav--prev" aria-label="Previous page">' +
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>' +
-      "</button>" +
-      '<button type="button" class="rc-nav rc-nav--next" aria-label="Next page">' +
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>' +
-      "</button>" +
       (mode === "full"
         ? '<div class="rc-index"><span id="rcIndexCurrent">1</span> / ' + pages.length + "</div>"
         : "") +
@@ -111,8 +105,6 @@
     const leafEl = container.querySelector("#rcLeaf");
     const frontEl = container.querySelector("#rcFront");
     const backEl = container.querySelector("#rcBack");
-    const prevBtn = container.querySelector(".rc-nav--prev");
-    const nextBtn = container.querySelector(".rc-nav--next");
     const indexEl = container.querySelector("#rcIndexCurrent");
     let animating = false;
     let autoTimer = null;
@@ -177,8 +169,6 @@
     }
 
     function updateNavState() {
-      prevBtn.disabled = current <= 0;
-      nextBtn.disabled = current >= pages.length - 1;
       if (indexEl) indexEl.textContent = String(current + 1);
     }
 
@@ -247,16 +237,7 @@
     preloadPage(current + 2);
     updateNavState();
 
-    nextBtn.addEventListener("click", function () {
-      handleManualInteraction();
-      goNext();
-    });
-    prevBtn.addEventListener("click", function () {
-      handleManualInteraction();
-      goPrev();
-    });
-
-    // Click the page itself: right half = next, left half = prev (desktop affordance)
+    // Click the page itself: right half = next, left half = prev
     container.querySelector(".rc-stage").addEventListener("click", function (e) {
       handleManualInteraction();
       const rect = this.getBoundingClientRect();
